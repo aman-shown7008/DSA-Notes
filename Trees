@@ -27,3 +27,12 @@ Ex-             100
             80      120
           /   \     /  \
         60    90  110  150
+
+USE - If some collage want to make ADMIN panel and want to put the whole hierachy of collage in that by coding. So at that time we can use Binary Tree.  
+             Dean/Principal
+           /       |       \
+     Mechinal     CS      Electrical 
+         |         |          | 
+     Teacher     Teacher    Teacher
+        |           |         | 
+     Student     Student    Student
