@@ -1,1 +1,145 @@
+Q. What is Graph?
+A. A graph data structure is a collection of nodes that have data and are connected to other nodes.
+For ex- On facebook, everything is a node. That includes User, Photo, Album, Event, Group, Page, Comment, Story, Video, Link, Note...anything that has data is a node.
+
+Every relationship is an edge from one node to another. Whether you post a photo, join a group, like a page, etc., a new edge is created for that relationship.
+         User (John)
+           |
+     (likes Photo)
+           |
+        Photo (Beach)
+     /     |       \
+User (Alice) User (Emma)
+    |         |       |
+(likes)  (comments) (likes)
+    |         |        |
+Comment    Comment      Comment
+(Nice!)    (Beautiful!)  (Amazing!)
+
+Graphs can be categorized into two main types:
+
+1. Directed Graph (Digraph): In a directed graph, edges have a direction associated with them, indicating a one-way relationship between nodes.
+   Ex - 
+   A --> B
+   |     |
+   v     v
+   C --> D
+   Nodes: A, B, C, D
+   Directed Edges:
+    A points to B
+    A points to C
+    C points to D
+    B points to D
+
+2. Undirected Graph: In an undirected graph, edges do not have a direction, indicating a two-way relationship between nodes.
+   Ex-
+   A --- B
+   |     |
+   |     |
+   C --- D
+   Nodes: A, B, C, D
+   Undirected Edges:
+    A is connected to B
+    A is connected to C
+    B is connected to D
+    C is connected to D
+
+Adjacency: A vertex is said to be adjacent to another vertex if there is an edge connecting them. Vertices 2 and 3 are not adjacent because there is no edge between them.
+Path: A sequence of edges that allows you to go from vertex A to vertex B is called a path. 0-1, 1-2 and 0-2 are paths from vertex 0 to vertex 2.
+Directed Graph: A graph in which an edge (u,v) doesn't necessarily mean that there is an edge (v, u) as well. The edges in such a graph are represented by arrows to show the direction of the edge.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
