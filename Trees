@@ -1,8 +1,8 @@
 Q. What is Binary Trees?And its properties.
 A binary tree is a tree data structure in which each parent node can have at most two children. Each node of a binary tree consists of three items:
-data item
-address of left child
-address of right child
+• Data item
+• Address of left child
+• Address of right child
 
 Terminologies in Binary Tree in Data Structure
 1. Nodes – Nodes are the building blocks of any data structure. They majorly contain some data and link to the next/previous nodes. In the case of binary trees, they contain the address of the left and the right child respectively.
@@ -19,8 +19,9 @@ Terminologies in Binary Tree in Data Structure
 <img src="https://i.imgur.com/HOu6ws4.png" alt="Main.png">
 
 
+
 Q. What is Binary Search Tree? And use of it.
-Binary Search Tree is a node-based binary tree data structure which has the following properties:
+A. Binary Search Tree is a node-based binary tree data structure which has the following properties:
 
 The left subtree of a node contains only nodes with keys lesser than the node’s key.
 The right subtree of a node contains only nodes with keys greater than the node’s key.
@@ -39,3 +40,64 @@ USE - If some collage want to make ADMIN panel and want to put the whole hierach
      Teacher     Teacher    Teacher
         |           |         | 
      Student     Student    Student
+
+
+
+Q. How many types of traversal are there?
+A. There are three traversals - 
+
+1. Pre-order
+2. In-order
+3. Post-order
+4. Level-order
+
+Example Demo - [
+
+import java.util.*;
+class Solution {
+    // Definition for a binary tree node.
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode(int x) { val = x; }
+    }
+
+    // Pre-order traversal: Root -> Left -> Right
+    public void preOrder(TreeNode root) {
+        if (root == null) return;
+        System.out.print(root.val + " ");
+        preOrder(root.left);
+        preOrder(root.right);
+    }
+
+    // In-order traversal: Left -> Root -> Right
+    public void inOrder(TreeNode root) {
+        if (root == null) return;
+        inOrder(root.left);
+        System.out.print(root.val + " ");
+        inOrder(root.right);
+    }
+
+    // Post-order traversal: Left -> Right -> Root
+    public void postOrder(TreeNode root) {
+        if (root == null) return;
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.val + " ");
+    }
+
+    // Level-order traversal using BFS
+    public void levelOrder(TreeNode root) {
+        if (root == null) return;
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            System.out.print(node.val + " ");
+            if (node.left != null) queue.add(node.left);
+            if (node.right != null) queue.add(node.right);
+        }
+    }
+}
+]
