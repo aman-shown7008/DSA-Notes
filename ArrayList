@@ -1,0 +1,83 @@
+Q. What is ArrayList & Use?
+A. An ArrayList in Java is a resizable array that implements the List interface provided by the Java Collections Framework. It dynamically resizes itself as elements are added or removed, providing flexibility in managing collections of objects.
+   
+   When to use the ArrayList?
+
+1. Dynamic Size: When the size of the collection is not known in advance or can change over time, ArrayList can dynamically resize itself, making it suitable for situations where the size of the collection may vary.
+2. Random Access: When there is a need for fast access to elements by their index. ArrayList provides constant-time access to elements by index, making it efficient for scenarios where elements need to be accessed frequently.
+3. Ordered Collection: When maintaining the order of elements is important. ArrayList maintains the order of elements in the sequence they were added.
+
+  Use case in Real-world Scenario - 
+
+•  Suppose you are developing a shopping application where users can add items to their shopping cart. The shopping cart needs to dynamically adjust its size as users add or remove items. In this case, an ArrayList can be used to store the items in the shopping cart. 
+   As users add items to the cart, they can be added to the ArrayList, and if the cart becomes full, the ArrayList will automatically resize itself to accommodate additional items. Additionally, fast access to items by their index is crucial for displaying the contents of the cart, which ArrayList provides efficiently.
+
+
+
+Q. What is difference between Array and ArrayList? When to use it?
+A. Array-
+1. Fixed Size vs. Dynamic Size:
+•  Array: Arrays have a fixed size that must be specified when they are created.
+•  ArrayList: ArrayLists have a dynamic size and can grow or shrink as needed.
+
+   // Array with fixed size
+   int[] array = new int[5];
+   array[0] = 1; // OK
+   array[5] = 6; // ArrayIndexOutOfBoundsException
+
+   // ArrayList with dynamic size
+   ArrayList<Integer> arrayList = new ArrayList<>();
+   arrayList.add(1); 
+
+2. Type Safety:
+•  Array: Arrays are not type-safe and can store any type of data.
+•  ArrayList: ArrayLists are type-safe and can only store objects of the specified type.
+
+   // Array is not type-safe
+   Object[] array = new Object[3];
+   array[0] = "Hello"; // OK
+   array[1] = 123; // OK
+
+   // ArrayList is type-safe
+   ArrayList<String> arrayList = new ArrayList<>();
+   arrayList.add("Hello"); // OK
+   arrayList.add(123); // Compilation error: incompatible types
+
+3. Resizable vs. Fixed:
+•  Array: Arrays have a fixed size and cannot be resized after creation.
+•  ArrayList: ArrayLists are resizable and can grow or shrink dynamically.
+
+   // Array with fixed size
+   int[] array = new int[3];
+   array[0] = 1;
+   array[1] = 2;
+   array[2] = 3;
+   // Resize not possible for array
+   array[3] = 4; // ArrayIndexOutOfBoundsException
+
+   // ArrayList with dynamic size
+   ArrayList<Integer> arrayList = new ArrayList<>();
+   arrayList.add(1);
+   arrayList.add(2);
+   arrayList.add(3);
+   // Resize ArrayList
+   arrayList.add(4); 
+
+4. When to use Array vs ArrayList:
+
+•  Use arrays when the size of the collection is known and fixed.
+•  When direct access to elements by index is required.
+•  When memory efficiency is a concern.
+
+•  Use ArrayList when the size of the collection is not known in advance or may change.
+•  When flexibility in adding or removing elements is required.
+•  When built-in methods for manipulating elements are needed.
+
+
+
+Q. Tell me Built-in methods of Array and ArrayList?
+A. Array - { https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html }
+   ArrayList - { https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html }
+
+
+
