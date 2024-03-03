@@ -1,1 +1,84 @@
+Q. What is LinkedList?
+A. A linked list is a linear data structure consisting of a sequence of elements, where each element points to the next one, forming a chain-like structure.
+   Each element, known as a node, contains both data and a reference (or pointer) to the next node in the sequence. The last node in the list points to a null reference, indicating the end of the list.
 
+   Use case of Real-world Scenario-
+   In a real-world scenario, think of a linked list like a train with each train car (node) connected to the next one. Each car carries cargo (data), and the train conductor (the last node) knows the way to the next station (the next node).
+   Passengers can board or leave the train at any station, and the train can expand or contract by adding or removing cars dynamically.
+
+   Types of LinkedList - 
+
+1. Singly Linked List:
+•  In a singly linked list, each node points to the next node in the sequence, forming a unidirectional chain.
+•  Diagram:
+   Head -> Node1 -> Node2 -> Node3 -> null
+•  Key Points:
+•     Each node contains data and a reference to the next node.
+•     The last node points to null.
+
+2. Doubly Linked List:
+•  In a doubly linked list, each node contains two pointers: one pointing to the next node and another pointing to the previous node, forming a bidirectional chain.
+•  Diagram:
+   null <- Node1 <-> Node2 <-> Node3 -> null
+•  Key Points:
+•     Each node has references to both the next and previous nodes.
+•     Allows traversal in both forward and backward directions.
+
+3. Circular Linked List:
+•  In a circular linked list, the last node points back to the first node, forming a circular structure.
+•  Diagram:
+   Head -> Node1 -> Node2 -> Node3
+   ^                      |
+   |______________________|
+•  Key Points:
+•     The last node points back to the first node, creating a loop.
+•     Can be used in applications where elements need to be accessed in a continuous loop.
+
+Implementasion of all the methods of LinkedList-
+{ https://leetcode.com/playground/DmqV3EPd }
+
+
+
+Q. When to use ArrayList and LinkedList?
+A. When to use ArrayList:
+1. Random Access: When frequent access to elements by index is required.
+  // ArrayList implementation for random access
+  ArrayList<Integer> arrayList = new ArrayList<>();
+  arrayList.add(1);
+  arrayList.add(2);
+  int element = arrayList.get(1);
+
+2. Dynamic Resizing: When the size of the collection may vary and needs to be dynamically adjusted.
+  // ArrayList implementation for dynamic resizing
+  ArrayList<Integer> arrayList = new ArrayList<>();
+  arrayList.add(1);
+  arrayList.add(2);
+
+3. Simple Usage: When a straightforward data structure is needed for managing a list of elements.
+  // ArrayList implementation for simple usage
+  ArrayList<Integer> arrayList = new ArrayList<>();
+  arrayList.add(1);
+  arrayList.add(2);
+
+•  When to use LinkedList:
+1. Frequent Insertions and Deletions: When elements are frequently added or removed from the middle of the list.
+   // LinkedList implementation for frequent insertions and deletions
+   LinkedList<Integer> linkedList = new LinkedList<>();
+   linkedList.add(1);
+   linkedList.add(2);
+   linkedList.add(1, 3); // Insertion at index 1
+
+2. Memory Efficiency: When memory efficiency is a concern and individual nodes can be allocated and deallocated dynamically.
+   // LinkedList implementation for memory efficiency
+   LinkedList<Integer> linkedList = new LinkedList<>();
+   linkedList.add(1);
+   linkedList.add(2);
+
+3. Iterating Over Elements: When sequential access or iteration over elements is required.
+   // LinkedList implementation for iterating over elements
+   LinkedList<Integer> linkedList = new LinkedList<>();
+   linkedList.add(1);
+   linkedList.add(2);
+   for (Integer element : linkedList) {
+     // Iterate over elements
+   }
