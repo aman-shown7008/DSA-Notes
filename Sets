@@ -1,0 +1,6 @@
+Alternative Sets in Java-
+Data Structure	Uniqueness	Maintains Insertion Order?	Sorted?
+HashSet	         ✅ Yes	          ❌ No	                ❌ No
+LinkedHashSet	   ✅ Yes	          ✅ Yes	              ❌ No
+TreeSet	         ✅ Yes	          ❌ No	                ✅ Yes
+So, if you want to keep insertion order, use LinkedHashSet. If you need sorting, use TreeSet. 🚀
